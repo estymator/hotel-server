@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f12b815e-44cd-4fd5-b58c-2c4f55e95606" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hotels/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/KlientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/KlientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hotels/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Rezerwacja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Rezerwacja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/WebMvcConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/WebMvcConf.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,10 +92,14 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="768" y="240" width="374" height="633" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/0.1080.1920.1080@0.27.1920.1053" timestamp="1575070445513" />
-    <state x="620" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1575200202185">
+    <state x="743" y="296" width="424" height="521" key="FileChooserDialogImpl" timestamp="1575202154365">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="620" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/0.1080.1920.1080@0.27.1920.1053" timestamp="1575200202185" />
+    <state x="743" y="296" width="424" height="521" key="FileChooserDialogImpl/0.27.1920.1053/0.1080.1920.1080@0.27.1920.1053" timestamp="1575202154365" />
+    <state x="620" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1575233253226">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="620" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/0.1080.1920.1080@0.27.1920.1053" timestamp="1575233253226" />
     <state x="393" y="1142" width="1363" height="648" maximized="true" key="dock-window-1" timestamp="1575072346947">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
