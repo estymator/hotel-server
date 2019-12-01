@@ -1,15 +1,15 @@
-package models;
+package hotels.models;
 import javax.persistence.*;
 
 @Entity
 public class Klient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private String imie, nazwisko,adres_mail, login, phone_number;
+    private Integer idKlienta;
+    private String imie, nazwisko,adres_mail, login, nr_telefonu, typ="klient";
 
-    public Integer getId() {
-        return id;
+    public Integer getIdKlienta() {
+        return idKlienta;
     }
 
 
@@ -46,11 +46,11 @@ public class Klient {
         this.login = login;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getNr_telefonu() {
+        return nr_telefonu;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setNr_telefonu(String nr_telefonu) {
+        this.nr_telefonu = nr_telefonu;
     }
 }

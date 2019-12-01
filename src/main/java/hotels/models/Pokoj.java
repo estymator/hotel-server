@@ -1,0 +1,55 @@
+package hotels.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Pokoj {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id_pokoju;
+    private Integer iloscOsob, idHotelu;
+    private String standart,status;
+
+    public Integer getId_pokoju() {
+        return id_pokoju;
+    }
+
+    public void setId_pokoju(Integer id_pokoju) {
+        this.id_pokoju = id_pokoju;
+    }
+
+    public Integer getIloscOsob() {
+        return iloscOsob;
+    }
+
+    public void setIloscOsob(Integer iloscOsob) {
+        this.iloscOsob = iloscOsob;
+    }
+
+    public Integer getIdHotelu() {
+        return idHotelu;
+    }
+
+    public void setIdHotelu(Integer idHotelu) {
+        this.idHotelu = idHotelu;
+    }
+
+    public String getStandart() {
+        return standart;
+    }
+
+    public void setStandart(String standart) {
+        this.standart = standart;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+}
