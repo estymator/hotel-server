@@ -1,6 +1,7 @@
 package hotels;
 
 
+import java.security.Principal;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -26,7 +27,7 @@ public class HotelController {
     private PokojRepository pokojRepository;
 
     @PostMapping(path="/register")
-    public @ResponseBody String addNewUser(@RequestParam String imie,
+    public @ResponseBody Klient addNewUser(@RequestParam String imie,
                                            @RequestParam String nazwisko,
                                            @RequestParam String telefon,
                                            @RequestParam String email,
@@ -43,13 +44,45 @@ public class HotelController {
         k.setNr_telefonu(telefon);
         k.setLogin(login);
         klientRepository.save(k);
-
-        return "Saved";
+        System.out.println("Rejestracja " + k.getImie());
+        return k;
     }
+
+    @GetMapping(path="/home")
+    public @ResponseBody Iterable<Klient> sendHome(Principal principal)
+    {
+        System.out.println("/home "+principal.getName());
+        return findKlientByLogin(principal.getName());
+    }
+
+    @PostMapping(path="/klient/id")
+    public @ResponseBody
+    Optional<Klient> findKlientById(@RequestParam Integer id_klienta)
+    {
+        System.out.println("Klient id");
+        return klientRepository.findById(id_klienta);
+    }
+
+    @PostMapping(path="/klient/login")
+    public @ResponseBody
+    Iterable<Klient> findKlientByLogin(@RequestParam String login)
+    {
+        System.out.println("Klient login");
+        return klientRepository.findBylogin(login);
+    }
+
+    /*@GetMapping(path="/error")
+    public ModelAndView errorPage()
+    {
+        System.out.println("Error");
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("login");
+        return mv;
+    }*/
 
 
     @PostMapping(path="/hotel/add") // Map ONLY POST Requests
-    public @ResponseBody String addNewHotel (@RequestParam String nazwa
+    public @ResponseBody Hotel addNewHotel (@RequestParam String nazwa
             , @RequestParam String adres
             , @RequestParam String email
             , @RequestParam String telefon
@@ -63,18 +96,20 @@ public class HotelController {
         h.setAdres_mail(email);
         h.setNr_telefonu(telefon);
         h.setId_admina(id_admina);
+        System.out.println("Dodano hotel "+ h.getNazwa());
         hotelRepository.save(h);
-        return "Saved";
+        return h;
     }
 
     @GetMapping(path="/hotel/all")
     public @ResponseBody Iterable<Hotel> getAllUsers() {
         // This returns a JSON or XML with the users
+        System.out.println("hotel all");
         return hotelRepository.findAll();
     }
 
     @PostMapping(path="/personel/add")
-    public @ResponseBody String addNewPersonel(@RequestParam String imie,
+    public @ResponseBody Personel addNewPersonel(@RequestParam String imie,
                                                @RequestParam String nazwisko,
                                                @RequestParam String email,
                                                @RequestParam String telefon,
@@ -87,7 +122,8 @@ public class HotelController {
         p.setNr_telefonu(telefon);
         p.setIdHotelu(idHotelu);
         personelRepository.save(p);
-        return "saved";
+        System.out.println("Dodano personel "+p.getImie());
+        return p;
     }
 
     @PostMapping(path="/personel/delete")
@@ -95,6 +131,7 @@ public class HotelController {
     String deletePersonel(@RequestParam Integer id_personelu)
     {
         personelRepository.deleteById(id_personelu);
+        System.out.println("usunieto personel");
         return "Deleted";
     }
 
@@ -102,6 +139,7 @@ public class HotelController {
     public @ResponseBody
     Optional<Personel> findPersonelById(@RequestParam Integer id_personelu)
     {
+        System.out.println("Personel id");
         return personelRepository.findById(id_personelu);
     }
 
@@ -109,6 +147,7 @@ public class HotelController {
     public @ResponseBody
     Iterable<Personel> findPersonelByIdHotelu(@RequestParam Integer idHotelu)
     {
+        System.out.println("Personel id");
         System.out.println(idHotelu);
         return personelRepository.findByidHotelu(idHotelu);
     }
@@ -117,11 +156,12 @@ public class HotelController {
     @GetMapping(path="/personel/all")
     public @ResponseBody Iterable<Personel> getAllPersonel()
     {
+        System.out.println("Personel All");
         return personelRepository.findAll();
     }
 
     @GetMapping(path="/")
-    public @ResponseBody String returnSomething()
+    public @ResponseBody String sendRoot()
     {
         return "root";
     }
@@ -129,20 +169,16 @@ public class HotelController {
     @GetMapping(path="/login")
     public ModelAndView login()
     {
-        System.out.println("kurde faja");
+        System.out.println("Logowanie");
         ModelAndView mv = new ModelAndView();
         mv.setViewName("login");
         return mv;
     }
 
-    @GetMapping(path="/home")
-    public @ResponseBody String returnSomething3()
-    {
-        return "get home";
-    }
+
 
     @PostMapping(path="/pokoj/add")
-    public @ResponseBody String addPokoj(@RequestParam Integer ilosc_osob,
+    public @ResponseBody Pokoj addPokoj(@RequestParam Integer ilosc_osob,
                                          @RequestParam String standart,
                                          @RequestParam String status,
                                          @RequestParam Integer idHotelu){
@@ -152,7 +188,8 @@ public class HotelController {
         p.setStatus(status);
         p.setIdHotelu(idHotelu);
         pokojRepository.save(p);
-        return "Added";
+        System.out.println("Dodano pokoj");
+        return p;
     }
 
 

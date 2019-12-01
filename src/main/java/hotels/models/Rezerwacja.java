@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Rezerwacja {
     @Id
     private String idPokoju;
-    private String idKlienta, Rodzaj, Stan, sataRozpoczęcia, dataZakonczenia;
+    private String idKlienta, Rodzaj, Stan, dataRozpoczecia, dataZakonczenia;
 
     public String getIdPokoju() {
         return idPokoju;
@@ -44,11 +44,11 @@ public class Rezerwacja {
     }
 
     public String getSataRozpoczęcia() {
-        return sataRozpoczęcia;
+        return dataRozpoczecia;
     }
 
     public void setSataRozpoczęcia(String sataRozpoczęcia) {
-        this.sataRozpoczęcia = sataRozpoczęcia;
+        this.dataRozpoczecia = sataRozpoczęcia;
     }
 
     public String getDataZakonczenia() {
