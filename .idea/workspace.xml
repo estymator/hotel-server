@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f12b815e-44cd-4fd5-b58c-2c4f55e95606" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/HotelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hotels/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hotels/WebMvcConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/WebMvcConf.java" afterDir="false" />
     </list>
