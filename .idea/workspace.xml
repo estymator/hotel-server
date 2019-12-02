@@ -2,9 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f12b815e-44cd-4fd5-b58c-2c4f55e95606" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/WebMvcConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/WebMvcConf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Hotel_Service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/Hotel.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/HotelController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/DaneLogowaniaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/HotelRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/KlientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PersonelRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PokojRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/RezerwacjaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/WebMvcConf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/DaneLogowania.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Hotel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Klient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Personel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Pokoj.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Rezerwacja.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
