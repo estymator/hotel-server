@@ -60,7 +60,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/pokoj/add").permitAll()
                 .antMatchers("/hotel/all ").hasAnyAuthority("klient")
                 .antMatchers("/personel/add").permitAll()//hasAnyAuthority("klient")
-                .antMatchers("/personel/all").permitAll()//hasAnyAuthority("klient")
+                .antMatchers("/personel/all").hasAnyAuthority("klient")
                 .antMatchers("/klient/id").permitAll()//hasAnyAuthority("klient")
                 .antMatchers("/klient/login").permitAll()
                 .antMatchers("/personel/id").permitAll()//hasAnyAuthority("klient")
