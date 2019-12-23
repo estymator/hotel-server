@@ -1,4 +1,4 @@
-package models;
+package hotels.models;
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +10,11 @@ public class DaneLogowania {
 
     public String getLogin() {
         return login;
+    }
+
+    public void setLogin(String login)
+    {
+        this.login=login;
     }
 
     public String getHaslo() {
