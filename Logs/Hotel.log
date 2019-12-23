@@ -1,0 +1,37 @@
+2019-12-02 01:03:53.888  INFO 17509 --- [main] hotels.Application                       : Starting Application on fedora-pawel with PID 17509 (/home/Estymator/Documents/IdeaProjects/Hotel_Service/build/classes/java/main started by Estymator in /home/Estymator/Documents/IdeaProjects/Hotel_Service)
+2019-12-02 01:03:53.890  INFO 17509 --- [main] hotels.Application                       : No active profile set, falling back to default profiles: default
+2019-12-02 01:03:54.464  INFO 17509 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 01:03:54.521  INFO 17509 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 6 repository interfaces.
+2019-12-02 01:03:54.794  INFO 17509 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 01:03:54.976  INFO 17509 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-12-02 01:03:54.984  INFO 17509 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-02 01:03:54.985  INFO 17509 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-02 01:03:55.043  INFO 17509 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-02 01:03:55.044  INFO 17509 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1116 ms
+2019-12-02 01:03:55.173  INFO 17509 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-02 01:03:55.212  INFO 17509 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-02 01:03:55.287  INFO 17509 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-02 01:03:55.349  INFO 17509 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 01:03:55.645  INFO 17509 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 01:03:55.657  INFO 17509 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2019-12-02 01:03:56.184  INFO 17509 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-02 01:03:56.188  INFO 17509 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 01:03:56.494  WARN 17509 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 01:03:56.603  INFO 17509 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resources/**'], []
+2019-12-02 01:03:56.604  INFO 17509 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/static/**'], []
+2019-12-02 01:03:56.604  INFO 17509 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2019-12-02 01:03:56.604  INFO 17509 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2019-12-02 01:03:56.604  INFO 17509 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2019-12-02 01:03:56.644  INFO 17509 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e62e227, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ac646b3, org.springframework.security.web.header.HeaderWriterFilter@4e6280de, org.springframework.web.filter.CorsFilter@5ebe903a, org.springframework.security.web.authentication.logout.LogoutFilter@3636f2a7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@720ffab4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cf072ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42cd0fc6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c88d04f, org.springframework.security.web.session.SessionManagementFilter@4a2653a0, org.springframework.security.web.access.ExceptionTranslationFilter@4e357792, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32298473]
+2019-12-02 01:03:56.770  INFO 17509 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 01:03:56.952  INFO 17509 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-12-02 01:03:56.953  INFO 17509 --- [main] hotels.Application                       : Started Application in 3.598 seconds (JVM running for 4.02)
+2019-12-02 01:04:14.729  INFO 17509 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-02 01:04:14.730  INFO 17509 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-02 01:04:14.740  INFO 17509 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-12-02 01:04:22.198 DEBUG 17509 --- [http-nio-8085-exec-3] org.hibernate.SQL                        : select klient0_.id_klienta as id_klien1_2_, klient0_.adres_mail as adres_ma2_2_, klient0_.imie as imie3_2_, klient0_.login as login4_2_, klient0_.nazwisko as nazwisko5_2_, klient0_.nr_telefonu as nr_telef6_2_, klient0_.typ as typ7_2_ from klient klient0_ where klient0_.login=?
+2019-12-02 01:04:22.201 TRACE 17509 --- [http-nio-8085-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pawel]
+2019-12-02 01:05:11.080  INFO 17509 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 01:05:11.087  INFO 17509 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 01:05:11.091  INFO 17509 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-02 01:05:11.111  INFO 17509 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
