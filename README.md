@@ -15,83 +15,114 @@
 
 ## Endpoints
 
-### /register
+###Rejestracja i logowanie
+
+#### /register POST
 
 -imie 
-
 -nazwisko
-
 -telefon
-
 -email
-
 -login
-
 -haslo
 
 bez walidacji, haslo szyfrowane bcrypt
 
-### /login  
+#### /login  POST
 -login 
 
 -haslo
 
 bez walidacji, haslo szyfrowane bcrypt
 
-### /logout
+#### /logout 
 
+###Hotele
 
-### /hotel/add
+#### /hotel/add POST
 
 -nazwa
-
 -adres
-
 -email
-
 -telefon
 
--id_admina(bez walidacji)
-
-### /hotel/all
+#### /hotel/all GET
 
 zwraca wszystkie hotele zapisane w bazie
 
-### /personel/add
+###Personel
+
+#### /personel/add POST
 
 -imie
-
 -nazwisko
-
 -email
-
 -telefon
 
 -idHotelu(bez walidacji)
 
-### /personel/delete
+#### /personel/id DELETE
 
--id_personelu
-
-
-### /personel/id
-
--id_personelu/idHotelu - zwraca osobe o danym id/osoby pracujące w hotelu o danym id
+-idPersonelu
 
 
-### /personel/all
+#### /personel/id GET
+
+-idPersonelu/idHotelu - zwraca osobe o danym id/osoby pracujące w hotelu o danym id
 
 
-### /pokoj/add
+#### /personel/all GET
 
--ilosc_osob
+###Pokoj
 
+#### /room/add POST
+
+-iloscOsob
 -standart
-
 -status
-
 -idHotelu
 
-###
+#### /room/id -GET
+-idPokoju
+
+#### /room/booked -GET -zwraca zajete aktualnie pokoje
+
+#### /room/available -GET -zwraca wolne pokoje
+
+#### /room/attribute -GET tylko wolne pokoje
+-idHotelu
+-iloscOsob
+-standart
+
+###Klient
+
+####klient/id Get
+-idKlienta
+
+#### klient/login Get
+-login
+
+#### klient/all
+
+
+###Rezerwacja
+
+#### /reservation/add -POST
+-idPokoju
+-idKlienta
+-rodzaj
+-stan
+-dataRozpoczecia
+-dataZakonczenia
+
+#### /reservation/id -GET -zwraca wszystkie rezerwacje danego pokoju lub klienta
+-idHotelu/idKlienta
+#### /reservation/id -GET
+-idPokoju
+-idKlienta
+
+#### /reservation/id -DELETE
+-idPokoju
+-idKlienta
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

@@ -6,5 +6,5 @@ import org.springframework.data.repository.Repository;
 
 public interface PersonelRepository extends CrudRepository<Personel, Integer> {
 
-    Iterable<Personel> findByidHotelu(Integer id_hotelu);
+    Iterable<Personel> findByIdHotelu(Integer id_hotelu);
 }

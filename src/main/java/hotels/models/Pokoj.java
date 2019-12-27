@@ -9,16 +9,16 @@ import javax.persistence.Id;
 public class Pokoj {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id_pokoju;
+    private Integer idPokoju;
     private Integer iloscOsob, idHotelu;
     private String standart,status;
 
     public Integer getId_pokoju() {
-        return id_pokoju;
+        return idPokoju;
     }
 
     public void setId_pokoju(Integer id_pokoju) {
-        this.id_pokoju = id_pokoju;
+        this.idPokoju = id_pokoju;
     }
 
     public Integer getIloscOsob() {
