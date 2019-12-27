@@ -36,7 +36,7 @@ bez walidacji, haslo szyfrowane bcrypt
 bez walidacji, haslo szyfrowane bcrypt
 
 #### /logout 
-
+zakonczenie sesji
 ###Hotele
 
 #### /hotel/add POST
@@ -124,5 +124,19 @@ zwraca wszystkie hotele zapisane w bazie
 #### /reservation/id -DELETE
 -idPokoju
 -idKlienta
+
+### Wydarzenia
+
+#### /event/all -GET
+
+#### /event/add -POST 
+-idPokoju
+-idPersonelu
+-dataWydarzenia
+-godzinaWydarzenia
+-typ
+
+#### /event/id -GET
+-idPokoju/idPersonelu
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

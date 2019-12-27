@@ -2,36 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33d15835-efe3-41de-b685-a0984fb92fa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/EventController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/ReservationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/RoomController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/StaffController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/MenuRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/OpiniaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PersonelWydarzeniePokojRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PosilekRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/WydarzenieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/models/CompKeyPWK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/models/CompKeyReservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Opinia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/models/PersonelWydarzeniePokoj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Posilek.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Wydarzenie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/Hotel.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/Hotel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PersonelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PersonelRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PokojRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PokojRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/RezerwacjaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/RezerwacjaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Pokoj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Pokoj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Rezerwacja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Rezerwacja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Controllers/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/WydarzenieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/WydarzenieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Wydarzenie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Wydarzenie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,5 +115,9 @@
       <screen x="1920" y="0" width="1440" height="900" />
     </state>
     <state x="1871" y="0" width="1396" height="706" maximized="true" key="dock-window-3/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577458467402" />
+    <state x="1920" y="0" width="1396" height="706" key="dock-window-4" timestamp="1577486967749">
+      <screen x="1920" y="0" width="1440" height="900" />
+    </state>
+    <state x="1920" y="0" width="1396" height="706" key="dock-window-4/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577486967749" />
   </component>
 </project>

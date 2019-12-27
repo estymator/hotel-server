@@ -35,4 +35,9 @@ public class Wydarzenie {
     public void setTyp(String typ) {
         this.typ = typ;
     }
+
+    public Integer getIdWydarzenia()
+    {
+        return idWydarzenia;
+    }
 }
