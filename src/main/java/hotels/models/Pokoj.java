@@ -10,7 +10,16 @@ public class Pokoj {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idPokoju;
-    private Integer iloscOsob, idHotelu;
+
+    public Integer getCena() {
+        return cena;
+    }
+
+    public void setCena(Integer cena) {
+        this.cena = cena;
+    }
+
+    private Integer iloscOsob, idHotelu, cena;
     private String standart,status;
 
     public Integer getId_pokoju() {

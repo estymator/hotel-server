@@ -16,7 +16,11 @@ public interface PokojRepository extends CrudRepository<Pokoj, Integer> {
     @Query("update Pokoj p set p.status='zajety' where p.idPokoju=:ip and p.idHotelu=:ih")
     Integer findPokojByIdPokojuAndIdHotelu(@Param("ip") Integer idPokoju,@Param("ih") Integer idHotelu);
 
+    @Modifying(clearAutomatically = true, flushAutomatically = true)
+    @Query("update Pokoj p set p.status=:status, p.iloscOsob=:io, p.standart=:standart, p.cena=:cena where p.idPokoju=:ip")
+    Integer updatePokoj(@Param("ip") Integer idPokoju, @Param("status") String status , @Param("io") Integer ilosc_osob, @Param("standart") String standart, @Param("cena") Integer cena);
 
-    Iterable<Pokoj> findByIdHoteluAndIloscOsobAndStandartAndStatus(Integer idHotelu, Integer iloscOsob, String standart, String status);
+
+    Iterable<Pokoj> findByIdHoteluAndIloscOsobAndStandartAndStatusAndCenaGreaterThanAndCenaLessThan(Integer idHotelu, Integer iloscOsob, String standart, String status, Integer cena_min, Integer cena_max);
     Iterable<Pokoj> findByStatus(String status);
 }

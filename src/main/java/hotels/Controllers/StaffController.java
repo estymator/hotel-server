@@ -25,14 +25,14 @@ public class StaffController {
                                                  @RequestParam String nazwisko,
                                                  @RequestParam String email,
                                                  @RequestParam String telefon,
-                                                 @RequestParam Integer idHotelu){
-        System.out.println(imie+nazwisko+email+telefon+idHotelu);
+                                                 @RequestParam Integer id_hotelu){
+        System.out.println(imie+nazwisko+email+telefon+id_hotelu);
         Personel  p =new Personel();
         p.setImie(imie);
         p.setNazwisko(nazwisko);
         p.setAdres_mail(email);
         p.setNr_telefonu(telefon);
-        p.setIdHotelu(idHotelu);
+        p.setIdHotelu(id_hotelu);
         personelRepository.save(p);
         System.out.println("Dodano personel "+p.getImie());
         return p;
@@ -40,28 +40,28 @@ public class StaffController {
 
     @DeleteMapping(path="/personel/id")
     public @ResponseBody
-    String deletePersonel(@RequestParam Integer idPersonelu)
+    String deletePersonel(@RequestParam Integer id_personelu)
     {
-        personelRepository.deleteById(idPersonelu);
+        personelRepository.deleteById(id_personelu);
         System.out.println("usunieto personel");
         return "Deleted";
     }
 
-    @GetMapping(path="/personel/id", params = "idPersonelu")
+    @GetMapping(path="/personel/id", params = "id_personelu")
     public @ResponseBody
-    Optional<Personel> findPersonelById(@RequestParam Integer idPersonelu)
+    Optional<Personel> findPersonelById(@RequestParam Integer id_personelu)
     {
         System.out.println("Personel id");
-        return personelRepository.findById(idPersonelu);
+        return personelRepository.findById(id_personelu);
     }
 
-    @GetMapping(path="/personel/id", params = "idHotelu")
+    @GetMapping(path="/personel/id", params = "id_hotelu")
     public @ResponseBody
-    Iterable<Personel> findPersonelByIdHotelu(@RequestParam Integer idHotelu)
+    Iterable<Personel> findPersonelByIdHotelu(@RequestParam Integer id_hotelu)
     {
         System.out.println("Personel id");
-        System.out.println(idHotelu);
-        return personelRepository.findByIdHotelu(idHotelu);
+        System.out.println(id_hotelu);
+        return personelRepository.findByIdHotelu(id_hotelu);
     }
 
 

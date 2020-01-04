@@ -110,6 +110,12 @@ public class HotelController {
         return hotelRepository.findAll();
     }
 
+    @DeleteMapping(path="/hotel/id")
+    public @ResponseBody String deleteHotelById(@RequestParam Integer id_hotelu)
+    {
+        hotelRepository.deleteById(id_hotelu);
+        return "deleted";
+    }
 
 
 

@@ -17,56 +17,56 @@ public class ReservationController {
 
     @PostMapping(path="/reservation/add")
     public @ResponseBody
-    Rezerwacja addReservation(@RequestParam Integer idPokoju,
-                                        @RequestParam Integer idKlienta,
+    Rezerwacja addReservation(@RequestParam Integer id_pokoju,
+                                        @RequestParam Integer id_klienta,
                                         @RequestParam String rodzaj,
                                         @RequestParam String stan,
-                                        @RequestParam String dataRozpoczecia,
-                                        @RequestParam String dataZakonczenia){
+                                        @RequestParam String data_rozpoczecia,
+                                        @RequestParam String data_zakonczenia){
         Rezerwacja r = new Rezerwacja();
-        r.setIdKlienta(idKlienta);
-        r.setIdPokoju(idPokoju);
+        r.setIdKlienta(id_klienta);
+        r.setIdPokoju(id_pokoju);
         r.setRodzaj(rodzaj);
         r.setStan(stan);
-        r.setDataRozpoczęcia(dataRozpoczecia);
-        r.setDataZakonczenia(dataZakonczenia);
+        r.setDataRozpoczęcia(data_rozpoczecia);
+        r.setDataZakonczenia(data_zakonczenia);
         rezerwacjaRepository.save(r);
         return r;
     }
 
-    @GetMapping(path="/reservation/id", params = "idPokoju")
+    @GetMapping(path="/reservation/id", params = "id_pokoju")
     public @ResponseBody
-    Iterable<Rezerwacja> getReservationByRoomId(@RequestParam Integer idPokoju){
-        System.out.println("rezerwacje pokoju "+idPokoju);
-        return rezerwacjaRepository.findRezerwacjaByIdPokoju(idPokoju);
+    Iterable<Rezerwacja> getReservationByRoomId(@RequestParam Integer id_pokoju){
+        System.out.println("rezerwacje pokoju "+id_pokoju);
+        return rezerwacjaRepository.findRezerwacjaByIdPokoju(id_pokoju);
     }
 
-    @GetMapping(path="/reservation/id", params = "idKlienta")
+    @GetMapping(path="/reservation/id", params = "id_klienta")
     public @ResponseBody
-    Iterable<Rezerwacja> getReservationByHotelId(@RequestParam Integer idKlienta){
-        System.out.println("rezerwacje klienta "+idKlienta);
-        return rezerwacjaRepository.findRezerwacjaByIdKlienta(idKlienta);
+    Iterable<Rezerwacja> getReservationByHotelId(@RequestParam Integer id_klienta){
+        System.out.println("rezerwacje klienta "+id_klienta);
+        return rezerwacjaRepository.findRezerwacjaByIdKlienta(id_klienta);
     }
 
-    @GetMapping(path="/reservation/id", params = {"idPokoju", "idKlienta"})
+    @GetMapping(path="/reservation/id", params = {"id_pokoju", "id_klienta"})
     public @ResponseBody
-    Iterable<Rezerwacja> getReservation(@RequestParam Integer idPokoju,
-                                        @RequestParam Integer idKlienta){
-        System.out.println("rezerwacje klienta "+idKlienta+idPokoju);
-        return rezerwacjaRepository.findRezerwacjaByIdKlientaAndIdPokoju(idKlienta, idPokoju);
+    Iterable<Rezerwacja> getReservation(@RequestParam Integer id_pokoju,
+                                        @RequestParam Integer id_klienta){
+        System.out.println("rezerwacje klienta "+id_klienta+id_pokoju);
+        return rezerwacjaRepository.findRezerwacjaByIdKlientaAndIdPokoju(id_klienta, id_pokoju);
     }
 
     @DeleteMapping(path="/reservation")
-    public @ResponseBody String deleteReservation(Integer idPokoju, Integer idKlienta)
+    public @ResponseBody String deleteReservation(Integer id_pokoju, Integer id_klienta)
     {
-        if(rezerwacjaRepository.deleteByIdKlientaAndIdPokoju(idKlienta, idPokoju)==1)
+        if(rezerwacjaRepository.deleteByIdKlientaAndIdPokoju(id_klienta, id_pokoju)==1)
         {
             System.out.println("usunieto personel");
             return "Deleted";
         }else
         {
             System.out.println("Błąd");
-            return "Błąd";
+            return "Error";
         }
 
 

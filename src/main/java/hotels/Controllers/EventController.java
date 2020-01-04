@@ -20,42 +20,49 @@ public class EventController {
     PersonelWydarzeniePokojRepository personelWydarzeniePokojRepository;
 
     @GetMapping(path = "/event/all")
-    @ResponseBody Iterable<Wydarzenie> getAllEvents()
+    public @ResponseBody Iterable<Wydarzenie> getAllEvents()
     {
         System.out.println("wszystkie wydarzenia");
         return wydarzenieRepository.findAll();
     }
 
     @PostMapping(path = "event/add")
-    @ResponseBody Wydarzenie addEvent(@RequestParam Integer idPokoju,
-                                                @RequestParam Integer idPersonelu,
-                                                @RequestParam String dataWydarzenia,
-                                                @RequestParam String godzinaWydarzenia,
+    public @ResponseBody Wydarzenie addEvent(@RequestParam Integer id_pokoju,
+                                                @RequestParam Integer id_personelu,
+                                                @RequestParam String data_wydarzenia,
+                                                @RequestParam String godzina_wydarzenia,
                                                 @RequestParam String typ)
     {
         Wydarzenie wydarzenie = new Wydarzenie();
-        wydarzenie.setDataWydarzenia(dataWydarzenia);
-        wydarzenie.setGodzinaWydarzenia(godzinaWydarzenia);
+        wydarzenie.setDataWydarzenia(data_wydarzenia);
+        wydarzenie.setGodzinaWydarzenia(godzina_wydarzenia);
         wydarzenie.setTyp(typ);
         wydarzenieRepository.save(wydarzenie);
         PersonelWydarzeniePokoj pwp = new PersonelWydarzeniePokoj();
-        pwp.setIdPersonelu(idPersonelu);
-        pwp.setIdPokoju(idPokoju);
+        pwp.setIdPersonelu(id_personelu);
+        pwp.setIdPokoju(id_pokoju);
         pwp.setIdWydarzenia(wydarzenie.getIdWydarzenia());
         personelWydarzeniePokojRepository.save(pwp);
 
         return wydarzenie;
     }
 
-    @GetMapping(path="event/id", params = "idPokoju")
-    @ResponseBody Iterable<Wydarzenie> getEventByIdPokoju(@RequestParam Integer idPokoju)
+    @GetMapping(path="event/id", params = "id_pokoju")
+    public @ResponseBody Iterable<Wydarzenie> getEventByIdPokoju(@RequestParam Integer id_pokoju)
     {
-        return wydarzenieRepository.getEventByIdPokoju(idPokoju);
+        return wydarzenieRepository.getEventByIdPokoju(id_pokoju);
     }
 
-    @GetMapping(path="event/id", params = "idPersonelu")
-    @ResponseBody Iterable<Wydarzenie> getEventByIdPersonelu(@RequestParam Integer idPersonelu)
+    @DeleteMapping(path="event/id")
+    public @ResponseBody String deleteEventById(@RequestParam Integer id_wydarzenia)
     {
-        return wydarzenieRepository.getEventByIdPersonelu(idPersonelu);
+        wydarzenieRepository.deleteById(id_wydarzenia);
+        return "deleted";
+    }
+
+    @GetMapping(path="event/id", params = "id_personelu")
+    public @ResponseBody Iterable<Wydarzenie> getEventByIdPersonelu(@RequestParam Integer id_personelu)
+    {
+        return wydarzenieRepository.getEventByIdPersonelu(id_personelu);
     }
 }

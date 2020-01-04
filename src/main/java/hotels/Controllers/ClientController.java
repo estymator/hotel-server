@@ -22,10 +22,10 @@ public class ClientController {
 
     @GetMapping(path="/klient/id")
     public @ResponseBody
-    Optional<Klient> findKlientById(@RequestParam Integer idKlienta)
+    Optional<Klient> findKlientById(@RequestParam Integer id_klienta)
     {
         System.out.println("Klient id");
-        return klientRepository.findById(idKlienta);
+        return klientRepository.findById(id_klienta);
     }
 
     @GetMapping(path="/klient/all")
@@ -34,6 +34,14 @@ public class ClientController {
     {
         System.out.println("Wszyscy klienci");
         return klientRepository.findAll();
+    }
+
+    @DeleteMapping(path="/klient/id")
+    public @ResponseBody
+    String deleteClient(@RequestParam Integer id_klienta)
+    {
+        klientRepository.deleteById(id_klienta);
+        return "deleted";
     }
 
 

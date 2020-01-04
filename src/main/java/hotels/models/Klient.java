@@ -13,6 +13,13 @@ public class Klient {
     }
 
 
+    public String getTyp() {
+        return typ;
+    }
+
+    public void setTyp(String typ) {
+        this.typ = typ;
+    }
 
     public String getImie() {
         return imie;
