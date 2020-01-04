@@ -1,12 +1,14 @@
 package hotels.Controllers;
 
 import java.security.Principal;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 import hotels.Repositories.*;
 import hotels.models.*;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
@@ -22,13 +24,11 @@ public class RoomController {
     @PostMapping(path="/room/add")
     public @ResponseBody Pokoj addPokoj(@RequestParam Integer ilosc_osob,
                                         @RequestParam String standart,
-                                        @RequestParam String status,
                                         @RequestParam Integer id_hotelu,
                                         @RequestParam Integer cena){
         Pokoj p =new Pokoj();
         p.setIloscOsob(ilosc_osob);
         p.setStandart(standart);
-        p.setStatus(status);
         p.setCena(cena);
         p.setIdHotelu(id_hotelu);
         pokojRepository.save(p);
@@ -52,25 +52,10 @@ public class RoomController {
         return "deleted";
     }
 
-    @PostMapping(path="room/reservation") //nieprzydatny
-    public @ResponseBody Optional<Pokoj>reservation(@RequestParam Integer id_pokoju,
-                                                    @RequestParam Integer id_hotelu)
-    {
-       Integer result = pokojRepository.findPokojByIdPokojuAndIdHotelu(id_pokoju,id_hotelu);
-       System.out.println("Zmieniono wierszy- "+result);
-       return findPokojById(id_pokoju);
 
 
-    }
 
 
-    @GetMapping(path="room/booked")
-    public @ResponseBody Iterable<Pokoj>getTaken()
-    {
-        Iterable<Pokoj> result = pokojRepository.findByStatus("zajety");
-        return result;
-
-    }
 
     @PutMapping(path="room/update")
     public @ResponseBody Optional<Pokoj> updateRoom(@RequestParam Integer id_pokoju,
@@ -79,9 +64,10 @@ public class RoomController {
                                           @RequestParam String status,
                                           @RequestParam Integer cena)
     {
-        pokojRepository.updatePokoj(id_pokoju,status,ilosc_osob,standart,cena);
+        pokojRepository.updatePokoj(id_pokoju,ilosc_osob,standart,cena);
         return pokojRepository.findById(id_pokoju);
     }
+
 
     @GetMapping(path="room/attribute")
     public @ResponseBody Iterable<Pokoj>getByAttribute(@RequestParam Integer id_hotelu,
@@ -90,7 +76,7 @@ public class RoomController {
                                                        @RequestParam Integer cena_min,
                                                        @RequestParam Integer cena_max)
     {
-        Iterable<Pokoj> result = pokojRepository.findByIdHoteluAndIloscOsobAndStandartAndStatusAndCenaGreaterThanAndCenaLessThan(id_hotelu,ilosc_osob,standart,"wolny", cena_min, cena_max);
+        Iterable<Pokoj> result = pokojRepository.findByIdHoteluAndIloscOsobAndStandartAndCenaGreaterThanAndCenaLessThan(id_hotelu,ilosc_osob,standart, cena_min, cena_max);
         return result;
 
     }
@@ -103,10 +89,11 @@ public class RoomController {
     }
 
     @GetMapping(path="room/available")
-    public @ResponseBody Iterable<Pokoj>getAvailable()
+    public @ResponseBody Iterable<Rezerwacja>getAvailable(@RequestParam Integer id_pokoju,
+                                                          @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data_rozpoczecia,
+                                                          @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data_zakonczenia)
     {
-        Iterable<Pokoj> result = pokojRepository.findByStatus("wolny");
+        Iterable<Rezerwacja> result = pokojRepository.checkAvailable(id_pokoju,data_rozpoczecia,data_zakonczenia);
         return result;
-
     }
 }

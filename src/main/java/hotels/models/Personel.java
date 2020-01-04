@@ -12,7 +12,7 @@ public class Personel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id_personelu;
     private String nr_telefonu;
-    private String imie, nazwisko, adres_mail;
+    private String imie, nazwisko, adresMail;
     private Integer idHotelu;
 
     public Integer getId_personelu() {
@@ -44,11 +44,11 @@ public class Personel {
     }
 
     public String getAdres_mail() {
-        return adres_mail;
+        return adresMail;
     }
 
     public void setAdres_mail(String adres_mail) {
-        this.adres_mail = adres_mail;
+        this.adresMail = adres_mail;
     }
 
     public Integer getIdHotelu() {
@@ -58,4 +58,5 @@ public class Personel {
     public void setIdHotelu(Integer idHotelu) {
         this.idHotelu = idHotelu;
     }
+
 }

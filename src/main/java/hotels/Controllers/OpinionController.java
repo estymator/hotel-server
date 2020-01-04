@@ -20,7 +20,7 @@ public class OpinionController {
                       @RequestParam String tresc)
     {
         Opinia o = new Opinia();
-        o.setDataWystawnienia(data_wystawienia);
+        o.setDataWystawienia(data_wystawienia);
         o.setGwiazdki(gwiazdki);
         o.setIdHotelu(id_hotelu);
         o.setTresc(tresc);

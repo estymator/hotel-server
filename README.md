@@ -99,8 +99,6 @@ id_hotelu
 
 -standart
 
--status
-
 -id_hotelu
 
 -cena
@@ -108,11 +106,15 @@ id_hotelu
 #### /room/id -GET
 -id_pokoju
 
-#### /room/booked -GET -zwraca zajete aktualnie pokoje
 
-#### /room/available -GET -zwraca aktualnie wolne pokoje
+#### /room/available -GET -Jeśli termin jest zajety zwraca liste kolidujących rezerwacji
 
-#### /room/attribute -GET tylko wolne pokoje
+-id_pokoju
+
+-data_rozpoczecia yyyy-mm-dd
+
+-data_zakonczenia yyyy-mm-dd
+#### /room/attribute -GET 
 
 -id_hotelu
 

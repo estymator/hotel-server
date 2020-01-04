@@ -1,13 +1,15 @@
 package hotels.models;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @IdClass(CompKeyReservation.class)
 public class Rezerwacja {
     @Id
     private Integer idPokoju, idKlienta;
-    private String Rodzaj, Stan, dataRozpoczecia, dataZakonczenia;
+    private String Rodzaj, Stan;
+    private LocalDate  dataRozpoczecia, dataZakonczenia;
 
 
 
@@ -43,19 +45,19 @@ public class Rezerwacja {
         Stan = stan;
     }
 
-    public String getdataRozpoczęcia() {
+    public LocalDate getdataRozpoczęcia() {
         return dataRozpoczecia;
     }
 
-    public void setDataRozpoczęcia(String dataRozpoczęcia) {
+    public void setDataRozpoczęcia(LocalDate dataRozpoczęcia) {
         this.dataRozpoczecia = dataRozpoczęcia;
     }
 
-    public String getDataZakonczenia() {
+    public LocalDate getDataZakonczenia() {
         return dataZakonczenia;
     }
 
-    public void setDataZakonczenia(String dataZakonczenia) {
+    public void setDataZakonczenia(LocalDate dataZakonczenia) {
         this.dataZakonczenia = dataZakonczenia;
     }
 

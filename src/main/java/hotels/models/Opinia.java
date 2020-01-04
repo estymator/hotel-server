@@ -12,6 +12,9 @@ public class Opinia {
     @Id
     Integer idOpinii;
 
+    Integer idHotelu, gwiazdki;
+    String dataWystawienia, tresc;
+
     public Integer getIdHotelu() {
         return idHotelu;
     }
@@ -29,11 +32,11 @@ public class Opinia {
     }
 
     public String getDataWystawnienia() {
-        return dataWystawnienia;
+        return dataWystawienia;
     }
 
-    public void setDataWystawnienia(String dataWystawnienia) {
-        this.dataWystawnienia = dataWystawnienia;
+    public void setDataWystawienia(String dataWystawnienia) {
+        this.dataWystawienia = dataWystawnienia;
     }
 
     public String getTresc() {
@@ -44,6 +47,5 @@ public class Opinia {
         this.tresc = tresc;
     }
 
-    Integer idHotelu, gwiazdki;
-    String dataWystawnienia, tresc;
+
 }

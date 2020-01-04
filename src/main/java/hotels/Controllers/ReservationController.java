@@ -4,8 +4,10 @@ package hotels.Controllers;
 import hotels.Repositories.RezerwacjaRepository;
 import hotels.models.Rezerwacja;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 @CrossOrigin
@@ -21,8 +23,8 @@ public class ReservationController {
                                         @RequestParam Integer id_klienta,
                                         @RequestParam String rodzaj,
                                         @RequestParam String stan,
-                                        @RequestParam String data_rozpoczecia,
-                                        @RequestParam String data_zakonczenia){
+                                        @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data_rozpoczecia,
+                                        @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data_zakonczenia){
         Rezerwacja r = new Rezerwacja();
         r.setIdKlienta(id_klienta);
         r.setIdPokoju(id_pokoju);
