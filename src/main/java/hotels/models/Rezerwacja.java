@@ -1,29 +1,31 @@
 package hotels.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
+@IdClass(CompKeyReservation.class)
 public class Rezerwacja {
     @Id
-    private String idPokoju;
-    private String idKlienta, Rodzaj, Stan, dataRozpoczecia, dataZakonczenia;
+    private Integer idPokoju, idKlienta;
+    private String Rodzaj, Stan;
+    private LocalDate  dataRozpoczecia, dataZakonczenia;
 
-    public String getIdPokoju() {
+
+
+    public Integer getIdPokoju() {
         return idPokoju;
     }
 
-    public void setIdPokoju(String idPokoju) {
+    public void setIdPokoju(Integer idPokoju) {
         this.idPokoju = idPokoju;
     }
 
-    public String getIdKlienta() {
+    public Integer getIdKlienta() {
         return idKlienta;
     }
 
-    public void setIdKlienta(String idKlienta) {
+    public void setIdKlienta(Integer idKlienta) {
         this.idKlienta = idKlienta;
     }
 
@@ -43,19 +45,20 @@ public class Rezerwacja {
         Stan = stan;
     }
 
-    public String getSataRozpoczęcia() {
+    public LocalDate getdataRozpoczęcia() {
         return dataRozpoczecia;
     }
 
-    public void setSataRozpoczęcia(String sataRozpoczęcia) {
-        this.dataRozpoczecia = sataRozpoczęcia;
+    public void setDataRozpoczęcia(LocalDate dataRozpoczęcia) {
+        this.dataRozpoczecia = dataRozpoczęcia;
     }
 
-    public String getDataZakonczenia() {
+    public LocalDate getDataZakonczenia() {
         return dataZakonczenia;
     }
 
-    public void setDataZakonczenia(String dataZakonczenia) {
+    public void setDataZakonczenia(LocalDate dataZakonczenia) {
         this.dataZakonczenia = dataZakonczenia;
     }
+
 }

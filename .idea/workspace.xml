@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f12b815e-44cd-4fd5-b58c-2c4f55e95606" name="Default Changelist" comment="">
+    <list default="true" id="33d15835-efe3-41de-b685-a0984fb92fa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/TestRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Hotel.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/Hotel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Controllers/OpinionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/OpinionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Controllers/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Controllers/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PersonelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PersonelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PokojRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/Repositories/PokojRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Opinia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Opinia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Personel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Personel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Pokoj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Pokoj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotels/models/Rezerwacja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hotels/models/Rezerwacja.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,16 +31,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1U2VICTVBvTF5O4n7Eqbbf3IjXT" />
+  <component name="ProjectId" id="1VU0YIjFGlxDMKaSYtpK1afXFjK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,15 +48,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Facets" />
-    <property name="project.structure.proportion" value="0.1199041" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="hotels" />
+      <recent name="hotels.Controllers" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -63,48 +76,62 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f12b815e-44cd-4fd5-b58c-2c4f55e95606" name="Default Changelist" comment="" />
-      <created>1574554594445</created>
+      <changelist id="33d15835-efe3-41de-b685-a0984fb92fa8" name="Default Changelist" comment="" />
+      <created>1577292421653</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574554594445</updated>
+      <updated>1577292421653</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="WindowStateProjectService">
-    <state x="768" y="240" width="374" height="633" key="#com.intellij.ide.util.MemberChooser" timestamp="1575070445513">
+    <state x="555" y="215" width="835" height="684" key="#Project_Structure" timestamp="1577143133782">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="768" y="240" width="374" height="633" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/0.1080.1920.1080@0.27.1920.1053" timestamp="1575070445513" />
-    <state x="743" y="296" width="424" height="521" key="FileChooserDialogImpl" timestamp="1575202154365">
+    <state x="555" y="215" width="835" height="684" key="#Project_Structure/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577143133782" />
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577293455639">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="743" y="296" width="424" height="521" key="FileChooserDialogImpl/0.27.1920.1053/0.1080.1920.1080@0.27.1920.1053" timestamp="1575202154365" />
-    <state x="2385" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1577138525691">
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577293455639" />
+    <state x="768" y="240" width="374" height="633" key="#com.intellij.ide.util.MemberChooser" timestamp="1578176032609">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="768" y="240" width="374" height="633" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1578176032609" />
+    <state x="693" y="341" width="524" height="452" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1577145242919">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="693" y="341" width="524" height="452" key="#com.intellij.ide.util.PackageChooserDialog/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577145242919" />
+    <state x="717" y="412" width="504" height="302" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1577145248527">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="717" y="412" width="504" height="302" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577145248527" />
+    <state x="729" y="296" width="452" height="521" key="FileChooserDialogImpl" timestamp="1577143594697">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="729" y="296" width="452" height="521" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577143594697" />
+    <state x="620" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578149115603">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="620" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1578149115603" />
+    <state x="1920" y="0" width="1375" height="706" key="dock-window-1" timestamp="1578154602577">
       <screen x="1920" y="0" width="1440" height="900" />
     </state>
-    <state x="620" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/0.1080.1920.1080@0.27.1920.1053" timestamp="1575320930687" />
-    <state x="2385" y="303" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1440.900@1920.0.1440.900" timestamp="1577138525691" />
-    <state x="393" y="1142" width="1363" height="648" maximized="true" key="dock-window-1" timestamp="1575072346947">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state x="1920" y="0" width="1375" height="706" key="dock-window-1/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1578154602577" />
+    <state x="2105" y="159" width="1396" height="706" key="dock-window-2" timestamp="1577450835910">
+      <screen x="1920" y="0" width="1440" height="900" />
     </state>
-    <state x="393" y="1142" width="1363" height="648" maximized="true" key="dock-window-1/0.27.1920.1053/0.1080.1920.1080@0.27.1920.1053" timestamp="1575072346947" />
-    <state x="624" y="252" key="run.anything.popup" timestamp="1575125014790">
+    <state x="2105" y="159" width="1396" height="706" key="dock-window-2/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577450835910" />
+    <state x="1871" y="0" width="1396" height="706" maximized="true" key="dock-window-3" timestamp="1577458467402">
+      <screen x="1920" y="0" width="1440" height="900" />
+    </state>
+    <state x="1871" y="0" width="1396" height="706" maximized="true" key="dock-window-3/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577458467402" />
+    <state x="1920" y="0" width="1396" height="706" key="dock-window-4" timestamp="1577486967749">
+      <screen x="1920" y="0" width="1440" height="900" />
+    </state>
+    <state x="1920" y="0" width="1396" height="706" key="dock-window-4/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1577486967749" />
+    <state x="281" y="145" width="1347" height="824" key="new project wizard" timestamp="1578149176553">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="624" y="252" key="run.anything.popup/0.27.1920.1053/0.1080.1920.1080@0.27.1920.1053" timestamp="1575125014790" />
+    <state x="281" y="145" width="1347" height="824" key="new project wizard/0.27.1920.1053/1920.0.1440.900@0.27.1920.1053" timestamp="1578149176553" />
   </component>
 </project>

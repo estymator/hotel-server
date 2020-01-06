@@ -8,7 +8,6 @@ public class Hotel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id_hotelu;
     private String nazwa, adres,nr_telefonu, adres_mail;
-    private Integer id_administratora;
 
     public Integer getId() {
         return id_hotelu;
@@ -48,11 +47,5 @@ public class Hotel {
         this.adres_mail = adres_mail;
     }
 
-    public Integer getId_admina() {
-        return id_administratora;
-    }
 
-    public void setId_admina(Integer id_admina) {
-        this.id_administratora = id_admina;
-    }
 }
