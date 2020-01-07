@@ -12,7 +12,15 @@ public class Pokoj {
     private Integer idPokoju;
 
     private Integer iloscOsob, idHotelu, cena;
-    private String standart;
+    private String standart, zdjecie;
+
+    public String getZdjecie() {
+        return zdjecie;
+    }
+
+    public void setZdjecie(String zdjecie) {
+        this.zdjecie = zdjecie;
+    }
 
     public Integer getId_pokoju() {
         return idPokoju;

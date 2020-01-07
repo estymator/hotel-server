@@ -28,8 +28,8 @@ public class HotelController {
     @PostMapping(path="/register")
     public @ResponseBody Klient addNewUser(@RequestParam String imie,
                                            @RequestParam String nazwisko,
-                                           @RequestParam String telefon,
-                                           @RequestParam String email,
+                                           @RequestParam String nr_telefonu,
+                                           @RequestParam String adres_mail,
                                            @RequestParam String login,
                                            @RequestParam String haslo){
         DaneLogowania d = new DaneLogowania();
@@ -39,8 +39,8 @@ public class HotelController {
         Klient k = new Klient();
         k.setImie(imie);
         k.setNazwisko(nazwisko);
-        k.setAdres_mail(email);
-        k.setNr_telefonu(telefon);
+        k.setAdres_mail(adres_mail);
+        k.setNr_telefonu(nr_telefonu);
         k.setLogin(login);
         klientRepository.save(k);
         System.out.println("Rejestracja " + k.getImie());
@@ -88,16 +88,16 @@ public class HotelController {
     @PostMapping(path="/hotel/add") // Map ONLY POST Requests
     public @ResponseBody Hotel addNewHotel (@RequestParam String nazwa
             , @RequestParam String adres
-            , @RequestParam String email
-            , @RequestParam String telefon) {
+            , @RequestParam String adres_mail
+            , @RequestParam String nr_telefonu) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
         Hotel h = new Hotel();
         h.setNazwa(nazwa);
         h.setAdres(adres);
-        h.setAdres_mail(email);
-        h.setNr_telefonu(telefon);
+        h.setAdres_mail(adres_mail);
+        h.setNr_telefonu(nr_telefonu);
         System.out.println("Dodano hotel "+ h.getNazwa());
         hotelRepository.save(h);
         return h;

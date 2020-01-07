@@ -25,10 +25,12 @@ public class RoomController {
     public @ResponseBody Pokoj addPokoj(@RequestParam Integer ilosc_osob,
                                         @RequestParam String standart,
                                         @RequestParam Integer id_hotelu,
+                                        @RequestParam String zdjecie,
                                         @RequestParam Integer cena){
         Pokoj p =new Pokoj();
         p.setIloscOsob(ilosc_osob);
         p.setStandart(standart);
+        p.setZdjecie(zdjecie);
         p.setCena(cena);
         p.setIdHotelu(id_hotelu);
         pokojRepository.save(p);
@@ -61,10 +63,10 @@ public class RoomController {
     public @ResponseBody Optional<Pokoj> updateRoom(@RequestParam Integer id_pokoju,
                                           @RequestParam Integer ilosc_osob,
                                           @RequestParam String standart,
-                                          @RequestParam String status,
+                                          @RequestParam String zdjecie,
                                           @RequestParam Integer cena)
     {
-        pokojRepository.updatePokoj(id_pokoju,ilosc_osob,standart,cena);
+        pokojRepository.updatePokoj(id_pokoju,ilosc_osob,standart,cena,zdjecie);
         return pokojRepository.findById(id_pokoju);
     }
 

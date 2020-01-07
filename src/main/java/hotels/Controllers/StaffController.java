@@ -23,15 +23,15 @@ public class StaffController {
     @PostMapping(path="/personel/add")
     public @ResponseBody Personel addNewPersonel(@RequestParam String imie,
                                                  @RequestParam String nazwisko,
-                                                 @RequestParam String email,
-                                                 @RequestParam String telefon,
+                                                 @RequestParam String adres_mail,
+                                                 @RequestParam String nr_telefonu,
                                                  @RequestParam Integer id_hotelu){
-        System.out.println(imie+nazwisko+email+telefon+id_hotelu);
+        System.out.println(imie+nazwisko+adres_mail+nr_telefonu+id_hotelu);
         Personel  p =new Personel();
         p.setImie(imie);
         p.setNazwisko(nazwisko);
-        p.setAdres_mail(email);
-        p.setNr_telefonu(telefon);
+        p.setAdres_mail(adres_mail);
+        p.setNr_telefonu(nr_telefonu);
         p.setIdHotelu(id_hotelu);
         personelRepository.save(p);
         System.out.println("Dodano personel "+p.getImie());

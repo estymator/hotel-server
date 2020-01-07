@@ -23,9 +23,9 @@
 
 -nazwisko
 
--telefon
+-nr_telefonu
 
--email
+-adres_mail
 
 -login
 
@@ -51,9 +51,9 @@ zakonczenie sesji
 
 -adres
 
--email
+-adres_mail
 
--telefon
+-nr_telefonu
 
 
 #### /hotel/all GET
@@ -72,9 +72,9 @@ id_hotelu
 
 -nazwisko
 
--email
+-adres_mail
 
--telefon
+-nr_telefonu
 
 
 -id_hotelu(bez walidacji)
@@ -100,6 +100,8 @@ id_hotelu
 -standart
 
 -id_hotelu
+
+-zdjecie
 
 -cena
 
@@ -138,7 +140,7 @@ id_hotelu
 
 -standart
 
--status
+-zdjecie
 
 -cena
 
