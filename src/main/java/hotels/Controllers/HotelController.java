@@ -89,13 +89,15 @@ public class HotelController {
     public @ResponseBody Hotel addNewHotel (@RequestParam String nazwa
             , @RequestParam String adres
             , @RequestParam String adres_mail
-            , @RequestParam String nr_telefonu) {
+            , @RequestParam String nr_telefonu
+            , @RequestParam String zdjecie) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
         Hotel h = new Hotel();
         h.setNazwa(nazwa);
         h.setAdres(adres);
+        h.setZdjecie(zdjecie);
         h.setAdres_mail(adres_mail);
         h.setNr_telefonu(nr_telefonu);
         System.out.println("Dodano hotel "+ h.getNazwa());
@@ -116,6 +118,24 @@ public class HotelController {
         hotelRepository.deleteById(id_hotelu);
         return "deleted";
     }
+
+    @GetMapping(path="/hotel/id")
+    public @ResponseBody Optional<Hotel> getHotelById(@RequestParam Integer id_hotelu) {
+        return hotelRepository.findById(id_hotelu);
+    }
+
+    @PutMapping(path="hotel/update")
+    public @ResponseBody Optional<Hotel> updateHotel(@RequestParam Integer id_hotelu
+            , @RequestParam String nazwa
+            , @RequestParam String adres
+            , @RequestParam String adres_mail
+            , @RequestParam String nr_telefonu
+            , @RequestParam String zdjecie)
+    {
+        hotelRepository.updateHotel(id_hotelu, nazwa, adres, adres_mail, nr_telefonu, zdjecie);
+        return hotelRepository.findById(id_hotelu);
+    }
+
 
 
 

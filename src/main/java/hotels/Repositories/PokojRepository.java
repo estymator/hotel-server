@@ -23,6 +23,6 @@ public interface PokojRepository extends CrudRepository<Pokoj, Integer> {
     @Query("Select r from Rezerwacja r where r.dataRozpoczecia <= :d1 and r.dataZakonczenia >= :d1 or r.dataRozpoczecia <= :d2 and r.dataZakonczenia >= :d2 or r.dataRozpoczecia >= :d1 and r.dataZakonczenia <= :d2 and r.idPokoju=:id")
     Iterable<Rezerwacja> checkAvailable(@Param("id") Integer id, @Param("d1") LocalDate d1, @Param("d2") LocalDate d2);
 
-
+    Iterable<Pokoj> findByIdHotelu(Integer id_hotelu);
     Iterable<Pokoj> findByIdHoteluAndIloscOsobAndStandartAndCenaGreaterThanAndCenaLessThan(Integer idHotelu, Integer iloscOsob, String standart, Integer cena_min, Integer cena_max);
 }

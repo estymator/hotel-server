@@ -55,6 +55,8 @@ zakonczenie sesji
 
 -nr_telefonu
 
+-zdjecie
+
 
 #### /hotel/all GET
 
@@ -63,6 +65,24 @@ zwraca wszystkie hotele zapisane w bazie
 #### /hotel/id -DELETE
 
 id_hotelu
+
+#### /hotel.id -GET
+
+-id_hotelu
+
+#### /hotel/update -PUT
+
+-id_hotelu
+
+-nazwa
+
+-adres
+
+-adres_mail
+
+-nr_telefonu
+
+-zdjecie
 
 ###Personel
 
@@ -76,6 +96,7 @@ id_hotelu
 
 -nr_telefonu
 
+-pensja
 
 -id_hotelu(bez walidacji)
 
@@ -116,6 +137,7 @@ id_hotelu
 -data_rozpoczecia yyyy-mm-dd
 
 -data_zakonczenia yyyy-mm-dd
+
 #### /room/attribute -GET 
 
 -id_hotelu
@@ -127,6 +149,10 @@ id_hotelu
 -cena_min
 
 -cena_max
+
+#### /room/attribute -GET 
+
+-id_hotelu
 
 #### /room/id -DELETE
 
@@ -212,11 +238,21 @@ id_hotelu
 
 #### /event/id -GET
 
--id_pokoju/id_personelu
+-id_pokoju/id_personelu/id_wydarzenia
 
 #### /event/id -DELETE
 
 -id_wydarzenia
+
+#### /event/update -PUT
+
+-id_wydarzenia
+
+-data_wydarzenia
+
+-godzina_wydarzenia
+
+-typ
 
 ###Opinie
 
@@ -235,6 +271,52 @@ id_hotelu
 -id_opinii
 
 #### /opinion/id -GET
+-id_hotelu
+
+### Posilki
+
+#### /meal/all -GET
+
+#### /meal/id -GET
+
+-id_menu/id_posilku
+
+#### /meal/id -DELETE
+
+-id_posilku
+
+#### /meal/name -DELETE
+
+-nazwa
+
+#### /meal/add -POST
+
+-id_menu
+
+-nazwa
+
+#### /meal/update -PUT
+
+-id_posilku
+
+-id_menu
+
+-nazwa
+
+###Menu
+
+#### /menu/all -GET
+
+#### /menu/id -DELETE
+
+-id_menu
+
+#### /menu/id -GET
+
+-id_menu/id_hotelu
+
+#### /menu/add POST
+
 -id_hotelu
 
 

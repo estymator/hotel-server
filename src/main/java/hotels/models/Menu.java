@@ -11,5 +11,23 @@ public class Menu {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     Integer idMenu;
-    Integer idWydarzenia;
+    Integer idHotelu;
+
+    public Integer getIdMenu() {
+        return idMenu;
+    }
+
+    public void setIdMenu(Integer idMenu) {
+        this.idMenu = idMenu;
+    }
+
+    public Integer getIdHotelu() {
+        return idHotelu;
+    }
+
+    public void setIdHotelu(Integer idHotelu) {
+        this.idHotelu = idHotelu;
+    }
+
+
 }

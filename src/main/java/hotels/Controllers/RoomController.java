@@ -71,7 +71,7 @@ public class RoomController {
     }
 
 
-    @GetMapping(path="room/attribute")
+    @GetMapping(path="room/attribute", params = {"id_hotelu", "ilosc_osob","standart","cena_min","cena_max"})
     public @ResponseBody Iterable<Pokoj>getByAttribute(@RequestParam Integer id_hotelu,
                                                        @RequestParam Integer ilosc_osob,
                                                        @RequestParam String standart,
@@ -79,6 +79,14 @@ public class RoomController {
                                                        @RequestParam Integer cena_max)
     {
         Iterable<Pokoj> result = pokojRepository.findByIdHoteluAndIloscOsobAndStandartAndCenaGreaterThanAndCenaLessThan(id_hotelu,ilosc_osob,standart, cena_min, cena_max);
+        return result;
+
+    }
+
+    @GetMapping(path="room/attribute", params = "id_hotelu")
+    public @ResponseBody Iterable<Pokoj>getByAttribute(@RequestParam Integer id_hotelu)
+    {
+        Iterable<Pokoj> result = pokojRepository.findByIdHotelu(id_hotelu);
         return result;
 
     }

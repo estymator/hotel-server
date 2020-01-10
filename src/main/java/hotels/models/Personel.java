@@ -14,6 +14,7 @@ public class Personel {
     private String nr_telefonu;
     private String imie, nazwisko, adresMail;
     private Integer idHotelu;
+    private String pensja;
 
     public Integer getId_personelu() {
         return id_personelu;
@@ -41,6 +42,14 @@ public class Personel {
 
     public void setNazwisko(String nazwisko) {
         this.nazwisko = nazwisko;
+    }
+
+    public String getPensja() {
+        return pensja;
+    }
+
+    public void setPensja(String pensja) {
+        this.pensja = pensja;
     }
 
     public String getAdres_mail() {

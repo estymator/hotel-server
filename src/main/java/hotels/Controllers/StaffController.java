@@ -25,11 +25,13 @@ public class StaffController {
                                                  @RequestParam String nazwisko,
                                                  @RequestParam String adres_mail,
                                                  @RequestParam String nr_telefonu,
+                                                 @RequestParam String pensja,
                                                  @RequestParam Integer id_hotelu){
         System.out.println(imie+nazwisko+adres_mail+nr_telefonu+id_hotelu);
         Personel  p =new Personel();
         p.setImie(imie);
         p.setNazwisko(nazwisko);
+        p.setPensja(pensja);
         p.setAdres_mail(adres_mail);
         p.setNr_telefonu(nr_telefonu);
         p.setIdHotelu(id_hotelu);
@@ -71,5 +73,8 @@ public class StaffController {
         System.out.println("Personel All");
         return personelRepository.findAll();
     }
+
+
+
 
 }

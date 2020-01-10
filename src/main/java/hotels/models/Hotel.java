@@ -6,21 +6,19 @@ public class Hotel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id_hotelu;
-    private String nazwa, adres,nr_telefonu, adres_mail;
+    private Integer idHotelu;
+    private String nazwa;
+    private String adres;
+    private String nr_telefonu;
+    private String adres_mail;
+    private String zdjecie;
 
-    public Integer getId() {
-        return id_hotelu;
+    public Integer getIdHotelu() {
+        return idHotelu;
     }
 
-
-
-    public String getNazwa() {
-        return nazwa;
-    }
-
-    public void setNazwa(String nazwa) {
-        this.nazwa = nazwa;
+    public void setIdHotelu(Integer idHotelu) {
+        this.idHotelu = idHotelu;
     }
 
     public String getAdres() {
@@ -45,6 +43,23 @@ public class Hotel {
 
     public void setAdres_mail(String adres_mail) {
         this.adres_mail = adres_mail;
+    }
+
+    public String getZdjecie() {
+        return zdjecie;
+    }
+
+    public void setZdjecie(String zdjecie) {
+        this.zdjecie = zdjecie;
+    }
+
+
+    public String getNazwa() {
+        return nazwa;
+    }
+
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
     }
 
 

@@ -68,7 +68,7 @@ public class ReservationController {
         }else
         {
             System.out.println("Błąd");
-            return "Error";
+            return "Not found";
         }
 
 

@@ -60,9 +60,25 @@ public class EventController {
         return "deleted";
     }
 
+    @GetMapping(path="event/id", params ="id_wydarzenia")
+    public @ResponseBody Optional<Wydarzenie> getById(@RequestParam Integer id_wydarzenia)
+    {
+        return wydarzenieRepository.findById(id_wydarzenia);
+    }
+
     @GetMapping(path="event/id", params = "id_personelu")
     public @ResponseBody Iterable<Wydarzenie> getEventByIdPersonelu(@RequestParam Integer id_personelu)
     {
         return wydarzenieRepository.getEventByIdPersonelu(id_personelu);
+    }
+
+    @PutMapping(path="event/update")
+    public @ResponseBody Optional<Wydarzenie> updateEvent(@RequestParam Integer id_wydarzenia,
+                                                          @RequestParam String data_wydarzenia,
+                                                          @RequestParam String godzina_wydarzenia,
+                                                          @RequestParam String typ)
+    {
+        wydarzenieRepository.updateWydarzenie(id_wydarzenia, data_wydarzenia, godzina_wydarzenia, typ);// TODO - create this func
+        return wydarzenieRepository.findById(id_wydarzenia);
     }
 }
