@@ -8,6 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 
 @Transactional
 public interface WydarzenieRepository extends CrudRepository<Wydarzenie, Integer> {
@@ -19,6 +20,6 @@ public interface WydarzenieRepository extends CrudRepository<Wydarzenie, Integer
     Iterable<Wydarzenie> getEventByIdPersonelu(@Param("idP") Integer IdPersonelu);
 
     @Modifying(clearAutomatically = true, flushAutomatically = true)
-    @Query("update Wydarzenie w set w.dataWydarzenia=:data, w.godzinaWydarzenia=:godzina, w.typ=:typ where w.idWydarzenia=:id")
-    Integer updateWydarzenie(@Param("id") Integer id_wydarzenia,@Param("data") String data_wydarzenia,@Param("godzina") String godzina_wydarzenia,@Param("typ") String typ);
+    @Query("update Wydarzenie w set w.startWydarzenia=:start, w.koniecWydarzenia=:koniec, w.tytul=:tytul, w.tresc=:tresc where w.idWydarzenia=:id")
+    Integer updateWydarzenie(@Param("id") Integer id_wydarzenia, @Param("start") LocalDate start_wydarzenia, @Param("koniec") LocalDate koniec_wydarzenia, @Param("tytul") String tytul, @Param("tresc") String tresc);
 }

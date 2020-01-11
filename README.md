@@ -199,14 +199,14 @@ id_hotelu
 
 -stan
 
--data_rozpoczecia
+-data_rozpoczecia yyyy-mm-dd
 
--data_zakonczenia
+-data_zakonczenia yyyy-mm-dd
 
 
 #### /reservation/id -GET -zwraca wszystkie rezerwacje danego pokoju lub klienta
 
--id_hotelu/id_klienta
+-id_pokoju/id_klienta/id_hotelu
 
 #### /reservation/id -GET
 
@@ -216,9 +216,7 @@ id_hotelu
 
 #### /reservation/id -DELETE
 
--id_pokoju
-
--id_klienta
+-id_rezerwacji
 
 ### Wydarzenia
 
@@ -230,11 +228,13 @@ id_hotelu
 
 -id_personelu
 
--data_wydarzenia
+-start_wydarzenia yyyy-mm-dd
 
--godzina_wydarzenia
+-koniec_wydarzenia yyyy-mm-dd
 
--typ
+-tytul
+
+-tresc
 
 #### /event/id -GET
 
@@ -248,11 +248,13 @@ id_hotelu
 
 -id_wydarzenia
 
--data_wydarzenia
+-start_wydarzenia yyyy-mm-dd
 
--godzina_wydarzenia
+-koniec_wydarzenia yyyy-mm-dd
 
--typ
+-tytul
+
+-tresc
 
 ###Opinie
 

@@ -30,7 +30,7 @@ public class ReservationController {
         r.setIdPokoju(id_pokoju);
         r.setRodzaj(rodzaj);
         r.setStan(stan);
-        r.setDataRozpoczęcia(data_rozpoczecia);
+        r.setDataRozpoczecia(data_rozpoczecia);
         r.setDataZakonczenia(data_zakonczenia);
         rezerwacjaRepository.save(r);
         return r;
@@ -45,9 +45,16 @@ public class ReservationController {
 
     @GetMapping(path="/reservation/id", params = "id_klienta")
     public @ResponseBody
-    Iterable<Rezerwacja> getReservationByHotelId(@RequestParam Integer id_klienta){
+    Iterable<Rezerwacja> getReservationById(@RequestParam Integer id_klienta){
         System.out.println("rezerwacje klienta "+id_klienta);
         return rezerwacjaRepository.findRezerwacjaByIdKlienta(id_klienta);
+    }
+
+    @GetMapping(path="/reservation/id", params = "id_hotelu")
+    public @ResponseBody
+    Iterable<Rezerwacja> getReservationByHotelId(@RequestParam Integer id_hotelu){
+        System.out.println("rezerwacje w hotelu "+id_hotelu);
+        return rezerwacjaRepository.findRezerwacjaByIdHotelu(id_hotelu);
     }
 
     @GetMapping(path="/reservation/id", params = {"id_pokoju", "id_klienta"})
@@ -59,18 +66,10 @@ public class ReservationController {
     }
 
     @DeleteMapping(path="/reservation")
-    public @ResponseBody String deleteReservation(Integer id_pokoju, Integer id_klienta)
+    public @ResponseBody String deleteReservation(Integer id_rezerwacji)
     {
-        if(rezerwacjaRepository.deleteByIdKlientaAndIdPokoju(id_klienta, id_pokoju)==1)
-        {
-            System.out.println("usunieto personel");
-            return "Deleted";
-        }else
-        {
-            System.out.println("Błąd");
-            return "Not found";
-        }
-
+        rezerwacjaRepository.deleteById(id_rezerwacji);
+        return "Deleted";
 
     }
 

@@ -4,14 +4,31 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@IdClass(CompKeyReservation.class)
+
 public class Rezerwacja {
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
+    private Integer idRezerwacji;
+
     private Integer idPokoju, idKlienta;
     private String Rodzaj, Stan;
     private LocalDate  dataRozpoczecia, dataZakonczenia;
 
+    public Integer getIdRezerwacji() {
+        return idRezerwacji;
+    }
 
+    public void setIdRezerwacji(Integer idRezerwacji) {
+        this.idRezerwacji = idRezerwacji;
+    }
+
+    public LocalDate getDataRozpoczecia() {
+        return dataRozpoczecia;
+    }
+
+    public void setDataRozpoczecia(LocalDate dataRozpoczecia) {
+        this.dataRozpoczecia = dataRozpoczecia;
+    }
 
     public Integer getIdPokoju() {
         return idPokoju;
@@ -45,13 +62,6 @@ public class Rezerwacja {
         Stan = stan;
     }
 
-    public LocalDate getdataRozpoczęcia() {
-        return dataRozpoczecia;
-    }
-
-    public void setDataRozpoczęcia(LocalDate dataRozpoczęcia) {
-        this.dataRozpoczecia = dataRozpoczęcia;
-    }
 
     public LocalDate getDataZakonczenia() {
         return dataZakonczenia;

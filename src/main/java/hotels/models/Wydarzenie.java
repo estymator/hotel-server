@@ -4,40 +4,56 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
 
 @Entity
 public class Wydarzenie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     Integer idWydarzenia;
-    String dataWydarzenia, godzinaWydarzenia, typ;
+    String tresc, tytul;
+    LocalDate startWydarzenia, koniecWydarzenia;
 
-    public String getDataWydarzenia() {
-        return dataWydarzenia;
+
+
+    public void setIdWydarzenia(Integer idWydarzenia) {
+        this.idWydarzenia = idWydarzenia;
     }
 
-    public void setDataWydarzenia(String dataWydarzenia) {
-        this.dataWydarzenia = dataWydarzenia;
+    public String getTresc() {
+        return tresc;
     }
 
-    public String getGodzinaWydarzenia() {
-        return godzinaWydarzenia;
+    public void setTresc(String tresc) {
+        this.tresc = tresc;
     }
 
-    public void setGodzinaWydarzenia(String godzinaWydarzenia) {
-        this.godzinaWydarzenia = godzinaWydarzenia;
+    public String getTytul() {
+        return tytul;
     }
 
-    public String getTyp() {
-        return typ;
-    }
-
-    public void setTyp(String typ) {
-        this.typ = typ;
+    public void setTytul(String tytul) {
+        this.tytul = tytul;
     }
 
     public Integer getIdWydarzenia()
     {
         return idWydarzenia;
+    }
+
+    public LocalDate getStartWydarzenia() {
+        return startWydarzenia;
+    }
+
+    public void setStartWydarzenia(LocalDate startWydarzenia) {
+        this.startWydarzenia = startWydarzenia;
+    }
+
+    public LocalDate getKoniecWydarzenia() {
+        return koniecWydarzenia;
+    }
+
+    public void setKoniecWydarzenia(LocalDate koniecWydarzenia) {
+        this.koniecWydarzenia = koniecWydarzenia;
     }
 }

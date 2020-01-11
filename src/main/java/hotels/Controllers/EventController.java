@@ -5,8 +5,10 @@ import hotels.Repositories.WydarzenieRepository;
 import hotels.models.PersonelWydarzeniePokoj;
 import hotels.models.Wydarzenie;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 @CrossOrigin
@@ -29,14 +31,16 @@ public class EventController {
     @PostMapping(path = "event/add")
     public @ResponseBody Wydarzenie addEvent(@RequestParam Integer id_pokoju,
                                                 @RequestParam Integer id_personelu,
-                                                @RequestParam String data_wydarzenia,
-                                                @RequestParam String godzina_wydarzenia,
-                                                @RequestParam String typ)
+                                                @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate start_wydarzenia,
+                                                @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate koniec_wydarzenia,
+                                                @RequestParam String tytul,
+                                                @RequestParam String tresc)
     {
         Wydarzenie wydarzenie = new Wydarzenie();
-        wydarzenie.setDataWydarzenia(data_wydarzenia);
-        wydarzenie.setGodzinaWydarzenia(godzina_wydarzenia);
-        wydarzenie.setTyp(typ);
+        wydarzenie.setStartWydarzenia(start_wydarzenia);
+        wydarzenie.setKoniecWydarzenia(koniec_wydarzenia);
+        wydarzenie.setTytul(tytul);
+        wydarzenie.setTresc(tresc);
         wydarzenieRepository.save(wydarzenie);
         PersonelWydarzeniePokoj pwp = new PersonelWydarzeniePokoj();
         pwp.setIdPersonelu(id_personelu);
@@ -74,11 +78,12 @@ public class EventController {
 
     @PutMapping(path="event/update")
     public @ResponseBody Optional<Wydarzenie> updateEvent(@RequestParam Integer id_wydarzenia,
-                                                          @RequestParam String data_wydarzenia,
-                                                          @RequestParam String godzina_wydarzenia,
-                                                          @RequestParam String typ)
+                                                          @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate start_wydarzenia,
+                                                          @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate koniec_wydarzenia,
+                                                          @RequestParam String tytul,
+                                                          @RequestParam String tresc)
     {
-        wydarzenieRepository.updateWydarzenie(id_wydarzenia, data_wydarzenia, godzina_wydarzenia, typ);// TODO - create this func
+        wydarzenieRepository.updateWydarzenie(id_wydarzenia, start_wydarzenia, koniec_wydarzenia, tytul, tresc);
         return wydarzenieRepository.findById(id_wydarzenia);
     }
 }
