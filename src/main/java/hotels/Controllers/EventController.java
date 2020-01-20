@@ -34,13 +34,15 @@ public class EventController {
                                                 @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate start_wydarzenia,
                                                 @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate koniec_wydarzenia,
                                                 @RequestParam String tytul,
-                                                @RequestParam String tresc)
+                                                @RequestParam String tresc,
+                                             @RequestParam String kolor)
     {
         Wydarzenie wydarzenie = new Wydarzenie();
         wydarzenie.setStartWydarzenia(start_wydarzenia);
         wydarzenie.setKoniecWydarzenia(koniec_wydarzenia);
         wydarzenie.setTytul(tytul);
         wydarzenie.setTresc(tresc);
+        wydarzenie.setKolor(kolor);
         wydarzenieRepository.save(wydarzenie);
         PersonelWydarzeniePokoj pwp = new PersonelWydarzeniePokoj();
         pwp.setIdPersonelu(id_personelu);
@@ -81,9 +83,10 @@ public class EventController {
                                                           @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate start_wydarzenia,
                                                           @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate koniec_wydarzenia,
                                                           @RequestParam String tytul,
-                                                          @RequestParam String tresc)
+                                                          @RequestParam String tresc,
+                                                          @RequestParam String kolor)
     {
-        wydarzenieRepository.updateWydarzenie(id_wydarzenia, start_wydarzenia, koniec_wydarzenia, tytul, tresc);
+        wydarzenieRepository.updateWydarzenie(id_wydarzenia, start_wydarzenia, koniec_wydarzenia, tytul, tresc, kolor);
         return wydarzenieRepository.findById(id_wydarzenia);
     }
 }

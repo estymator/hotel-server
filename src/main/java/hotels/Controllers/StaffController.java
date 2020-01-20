@@ -74,7 +74,18 @@ public class StaffController {
         return personelRepository.findAll();
     }
 
-
+    @PutMapping(path="personel/update")
+    public @ResponseBody Optional<Personel> updatePersonel(@RequestParam Integer id_personelu,
+                                                           @RequestParam String imie,
+                                                           @RequestParam String nazwisko,
+                                                           @RequestParam String adres_mail,
+                                                           @RequestParam String nr_telefonu,
+                                                           @RequestParam String pensja,
+                                                           @RequestParam Integer id_hotelu)
+    {
+        personelRepository.updatePersonel(id_personelu, imie, nazwisko, adres_mail, nr_telefonu, pensja, id_hotelu);
+        return personelRepository.findById(id_personelu);
+    }
 
 
 }

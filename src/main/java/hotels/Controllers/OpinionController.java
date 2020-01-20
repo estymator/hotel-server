@@ -5,6 +5,9 @@ import hotels.models.Opinia;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 @CrossOrigin
 @RestController
 public class OpinionController {
@@ -20,7 +23,8 @@ public class OpinionController {
                       @RequestParam String tresc)
     {
         Opinia o = new Opinia();
-        o.setDataWystawienia(data_wystawienia);
+        LocalDate data= LocalDate.now();
+        o.setDataWystawienia(data);
         o.setGwiazdki(gwiazdki);
         o.setIdHotelu(id_hotelu);
         o.setTresc(tresc);

@@ -20,6 +20,6 @@ public interface WydarzenieRepository extends CrudRepository<Wydarzenie, Integer
     Iterable<Wydarzenie> getEventByIdPersonelu(@Param("idP") Integer IdPersonelu);
 
     @Modifying(clearAutomatically = true, flushAutomatically = true)
-    @Query("update Wydarzenie w set w.startWydarzenia=:start, w.koniecWydarzenia=:koniec, w.tytul=:tytul, w.tresc=:tresc where w.idWydarzenia=:id")
-    Integer updateWydarzenie(@Param("id") Integer id_wydarzenia, @Param("start") LocalDate start_wydarzenia, @Param("koniec") LocalDate koniec_wydarzenia, @Param("tytul") String tytul, @Param("tresc") String tresc);
+    @Query("update Wydarzenie w set w.startWydarzenia=:start, w.koniecWydarzenia=:koniec, w.tytul=:tytul, w.tresc=:tresc, w.kolor=:kolor where w.idWydarzenia=:id")
+    Integer updateWydarzenie(@Param("id") Integer id_wydarzenia, @Param("start") LocalDate start_wydarzenia, @Param("koniec") LocalDate koniec_wydarzenia, @Param("tytul") String tytul, @Param("tresc") String tresc, @Param("kolor") String kolor);
 }

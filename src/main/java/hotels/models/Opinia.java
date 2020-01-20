@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
 
 @Entity
 public class Opinia {
@@ -13,7 +14,8 @@ public class Opinia {
     Integer idOpinii;
 
     Integer idHotelu, gwiazdki;
-    String dataWystawienia, tresc;
+    String tresc;
+    LocalDate dataWystawienia;
 
     public Integer getIdHotelu() {
         return idHotelu;
@@ -31,11 +33,11 @@ public class Opinia {
         this.gwiazdki = gwiazdki;
     }
 
-    public String getDataWystawnienia() {
+    public LocalDate getDataWystawnienia() {
         return dataWystawienia;
     }
 
-    public void setDataWystawienia(String dataWystawnienia) {
+    public void setDataWystawienia(LocalDate dataWystawnienia) {
         this.dataWystawienia = dataWystawnienia;
     }
 

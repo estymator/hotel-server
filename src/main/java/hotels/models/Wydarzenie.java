@@ -8,13 +8,25 @@ import java.time.LocalDate;
 
 @Entity
 public class Wydarzenie {
+
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     Integer idWydarzenia;
-    String tresc, tytul;
+    String tresc;
+    String tytul;
+
+
+    String kolor;
     LocalDate startWydarzenia, koniecWydarzenia;
 
 
+    public String getKolor() {
+        return kolor;
+    }
+
+    public void setKolor(String kolor) {
+        this.kolor = kolor;
+    }
 
     public void setIdWydarzenia(Integer idWydarzenia) {
         this.idWydarzenia = idWydarzenia;

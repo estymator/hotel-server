@@ -236,6 +236,8 @@ id_hotelu
 
 -tresc
 
+-kolor
+
 #### /event/id -GET
 
 -id_pokoju/id_personelu/id_wydarzenia
@@ -255,6 +257,8 @@ id_hotelu
 -tytul
 
 -tresc
+
+-kolor
 
 ###Opinie
 

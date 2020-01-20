@@ -1,6 +1,7 @@
 package hotels.Controllers;
 
 
+import hotels.Repositories.PokojRepository;
 import hotels.Repositories.RezerwacjaRepository;
 import hotels.models.Rezerwacja;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,9 @@ public class ReservationController {
     @Autowired
     RezerwacjaRepository rezerwacjaRepository;
 
+    @Autowired
+    PokojRepository pokojRepository;
+
     @PostMapping(path="/reservation/add")
     public @ResponseBody
     Rezerwacja addReservation(@RequestParam Integer id_pokoju,
@@ -25,15 +29,30 @@ public class ReservationController {
                                         @RequestParam String stan,
                                         @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data_rozpoczecia,
                                         @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate data_zakonczenia){
+        Iterable<Rezerwacja> check = pokojRepository.checkAvailable(id_pokoju, data_rozpoczecia, data_zakonczenia);
+        int counter = 0;
         Rezerwacja r = new Rezerwacja();
-        r.setIdKlienta(id_klienta);
-        r.setIdPokoju(id_pokoju);
-        r.setRodzaj(rodzaj);
-        r.setStan(stan);
-        r.setDataRozpoczecia(data_rozpoczecia);
-        r.setDataZakonczenia(data_zakonczenia);
-        rezerwacjaRepository.save(r);
-        return r;
+        for (Rezerwacja i : check) {
+            counter++;
+        }
+        if(counter>0)
+        {
+            return null;
+        }else
+        {
+
+            r.setIdKlienta(id_klienta);
+            r.setIdPokoju(id_pokoju);
+            r.setRodzaj(rodzaj);
+            r.setStan(stan);
+            r.setDataRozpoczecia(data_rozpoczecia);
+            r.setDataZakonczenia(data_zakonczenia);
+            rezerwacjaRepository.save(r);
+            return r;
+        }
+
+
+
     }
 
     @GetMapping(path="/reservation/id", params = "id_pokoju")
